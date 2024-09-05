@@ -1,11 +1,11 @@
-const TransactionItem = ({type, amount, currency}) => {
+const TransactionItem = ({ type, amount, currency }) => {
   return (
-    <tr>
-<th>{type}</th>
-<th>{amount}</th>
-<th>{currency}</th>
-    </tr>
-  )
-}
+    <>
+      <th>{type}</th>
+      <th>{amount}</th>
+      <th>{currency}</th>
+    </>
+  );
+};
 
-export default TransactionItem
+export default TransactionItem;

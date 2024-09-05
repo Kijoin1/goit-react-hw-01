@@ -1,28 +1,29 @@
-import TransactionItem from '../TransactionItem/TransactionItem'
-const TransactionHistory = ({items}) => {
+import s from "./TransactionHistory.module.css";
+import TransactionItem from "../TransactionItem/TransactionItem";
+const TransactionHistory = ({ items }) => {
   return (
-    <table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+    <table className={s.data}>
+      <thead className={s.title}>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
 
-  <tbody>
-{items.map((item)=>{
-<div key={item.id}>
-<TransactionItem
-    type={item.type}
-    amount={item.amount}
-    currency={item.currency}
-/>
-</div>
-    })}
-  </tbody>
-</table>
-  )
-}
+      <tbody className={s.item}>
+        {items.map((item) => (
+          <tr key={item.id}>
+            <TransactionItem
+              type={item.type}
+              amount={item.amount}
+              currency={item.currency}
+            />
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};
 
-export default TransactionHistory
+export default TransactionHistory;
