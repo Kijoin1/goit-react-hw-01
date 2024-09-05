@@ -1,7 +1,16 @@
+.friend {
+    font-size: 18px;
+    img {
+    margin-bottom: 4px;
+    }
+}
+
 .online {
 color: rgb(2, 161, 2);
+font-size: 14px;
 }
 
 .offline {
 color: rgb(194, 0, 0);
+font-size: 14px;
 }
